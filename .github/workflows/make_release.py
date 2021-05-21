@@ -38,11 +38,7 @@ if __name__ == "__main__":
         print(f'Usage: {sys.argv[0]} <file_to_upload> <bearer>')
         sys.exit(1)
 
-    repo_path = os.getenv('GITHUB_REPO')
-    if repo_path is None:
-        print(termcolor.colored(
-            'Environment variable GITHUB_REPO must be set', 'red'))
-        sys.exit(1)
+    repo_path = 'RedDocMD/butch'
     file_path = pathlib.PurePath(sys.argv[1])
     bearer = sys.argv[2]
 
